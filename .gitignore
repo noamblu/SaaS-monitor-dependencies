@@ -1,0 +1,14 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Python/Lambda Layer outputs
+layer/
+layer.zip
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
