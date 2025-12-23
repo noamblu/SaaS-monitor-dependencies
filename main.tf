@@ -26,3 +26,9 @@ resource "aws_lambda_layer_version" "dependencies" {
   compatible_runtimes = ["python3.9", "python3.10", "python3.11", "python3.12"] # Broad compatibility
   source_code_hash    = data.archive_file.layer_zip.output_base64sha256
 }
+
+resource "aws_schemas_registry" "this" {
+  name        = "saas-monitor-registry"
+  description = "Schema Registry for SaaS Monitor"
+  tags        = var.tags
+}
